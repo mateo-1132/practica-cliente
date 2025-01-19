@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import img1 from "../assets/img/img1.jpg";
+import img2 from "../assets/img/img2.jpg";
+import img3 from "../assets/img/img3.jpg";
+import img4 from "../assets/img/img4.jpg";
+import img5 from "../assets/img/img5.jpg";
+import img6 from "../assets/img/img6.jpg";
+import img7 from "../assets/img/img7.jpg";
+import img8 from "../assets/img/img8.jpg";
+import img9 from "../assets/img/img9.jpg";
+import img10 from "../assets/img/img10.jpg";
+import img11 from "../assets/img/img11.jpg";
+import img12 from "../assets/img/img12.jpg";
+import PhotoIcon from "../components/icons/PhotoIcon.astro";
+
+---
+
+<Layout>
+    <Header/>
+        <main class="flex-grow-[1] w-full max-w-4xl mx-auto">
+            <div class="flex gap-2 md:justify-center">
+                <PhotoIcon class="w-10 h-10" />
+                <h1 class="text-4xl font-bold">Galeria</h1>
+            </div>
+            <section class="pswp-gallery flex flex-wrap gap-2 justify-center mt-2" id="my-gallery">
+                <a
+                href={img1.src}
+                data-pswp-width="1024"
+                data-pswp-height="681"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[170px]"
+                        src={img1.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img2.src}
+                data-pswp-width="1024"
+                data-pswp-height="678"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[170px]"
+                        src={img2.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img3.src}
+                data-pswp-width="1024"
+                data-pswp-height="692"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[173px]"
+                        src={img3.src}
+                        alt=""
+                    />
+                </a>
+                
+                <a
+                href={img5.src}
+                data-pswp-width="1024"
+                data-pswp-height="721"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[180px]"
+                        src={img5.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img6.src}
+                data-pswp-width="1024"
+                data-pswp-height="680"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[170px]"
+                        src={img6.src}
+                        alt=""
+                    />
+                </a>
+                
+                
+                <a
+                href={img9.src}
+                data-pswp-width="1024"
+                data-pswp-height="696"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[174px]"
+                        src={img9.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img10.src}
+                data-pswp-width="1024"
+                data-pswp-height="698"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[175px]"
+                        src={img10.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img11.src}
+                data-pswp-width="1024"
+                data-pswp-height="754"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[189px]"
+                        src={img11.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img12.src}
+                data-pswp-width="1024"
+                data-pswp-height="676"
+                target="_blank"
+                >
+                    <img class=" w-[256px] h-[169px]"
+                        src={img12.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img4.src}
+                data-pswp-width="797"
+                data-pswp-height="1024"
+                target="_blank"
+                >
+                    <img class=" w-[192px] h-[256px]"
+                        src={img4.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img7.src}
+                data-pswp-width="671"
+                data-pswp-height="1204"
+                target="_blank"
+                >
+                    <img class=" w-[168px] h-[256px]"
+                        src={img7.src}
+                        alt=""
+                    />
+                </a>
+                <a
+                href={img8.src}
+                data-pswp-width="699"
+                data-pswp-height="1204"
+                target="_blank"
+                >
+                    <img class=" w-[175px] h-[256px]"
+                        src={img8.src}
+                        alt=""
+                    />
+                </a>
+            </section>
+        </main>
+    <Footer/>
+</Layout>

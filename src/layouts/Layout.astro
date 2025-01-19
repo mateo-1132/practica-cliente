@@ -1,22 +1,48 @@
+---
+	import '@fontsource-variable/onest'
+	import favicon from "../assets/img/favicon.png"
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={favicon.src} />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Steve Jobs</title>
+		<link rel="stylesheet" href="../../node_modules/@knight-lab/timelinejs/dist/css/timeline.css">
+		<link rel="stylesheet" href="../node_modules/photoswipe/dist/photoswipe.css">
+	
+    <script is:inline src="../../node_modules/@knight-lab/timelinejs/dist/js/timeline.js"></script>
+	<script is:inline>
+		function applyTheme() {
+		  localStorage.darkMode === 'enabled'
+			? document.documentElement.classList.add("dark")
+			: document.documentElement.classList.remove("dark");
+		
+			if (localStorage.getItem('darkMode') === 'enabled') {
+				document.querySelector("#changeTheme").checked = true;
+			}else {
+				document.querySelector("#changeTheme").checked = false;
+			}
+		}
+	  
+		document.addEventListener('astro:after-swap', applyTheme);
+		applyTheme();
+	  </script>
+	<script>
+	import "../js/switchTheme.js"
+	</script>
+
 	</head>
-	<body>
-		<slot />
+	<body class="font-onest bg-[#0A0A0A] dark:bg-white text-gray-100 dark:text-black">
+		<div class="absolute top-0 z-[-2] h-screen w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:hidden"></div>
+		<div class="absolute top-0 z-[-2] h-screen w-full bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] hidden dark:block"></div>
+		<div class="flex flex-col min-h-screen ">
+			<slot />
+		</div>
+		<script src="../js/photoswipe.js"></script>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

@@ -1,0 +1,44 @@
+---
+import GithubIcon from "./icons/GithubIcon.astro"
+import LinkedinIcon from "./icons/LinkedinIcon.astro"
+import MailIcon from "./icons/MailIcon.astro"
+---
+
+<footer class=" w-full h-24 py-4 mt-5 flex justify-around md:flex-col md:h-auto md:gap-3 border-t-2 border-gray-50 dark:border-gray-950">
+    <div class="">
+        <p class="md:text-center">&copy; 2025 Mateo Fernández Guirado.</p>
+        <ul class="list-none flex gap-4 justify-center">
+            <li><GithubIcon class="w-10 h-10 hover:stroke-red-800 transiton-colors duration-300 ease-in-out" / ></li>
+            <li><LinkedinIcon class="w-10 h-10 hover:stroke-red-800 transiton-colors duration-300 ease-in-out"/></li>
+            <li><MailIcon class="w-10 h-10  hover:stroke-red-800 transiton-colors duration-300 ease-in-out"/></li>
+        </ul>
+    </div>
+    <div id="cite" class="md:mx-auto">
+
+    </div>
+    <script is:inline>
+        const arrFrases = ["No puedes conectar los puntos mirando hacia adelante. Sólo puedes hacerlo mirando hacia atrás.",
+            "La innovación diferencia a un líder de un seguidor.",
+            "Decidir qué no hacer es tan importante como decidir qué hacer.",
+            "Tuve suerte. Supe muy temprano en mi vida qué era lo que deseaba hacer.",
+            "A veces la vida te golpea en la cabeza con un ladrillo. No pierdas fe.",
+            "El trabajo ocupará una gran parte de tu vida, la mejor forma de lidiar con ello, es encontrar algo que realmente ames.",
+            "Tiene que hacer algo que te apasione, porque de lo contrario, no tendrás la perseverancia para llevarlo a cabo.",
+            "Sé un criterio de calidad. Algunas personas no están acostumbradas a un ambiente donde se espera la excelencia."
+        ];
+        let frase = arrFrases[Math.floor(Math.random() * arrFrases.length)];
+        const $cite = document.querySelector("#cite");
+        let pFrase = document.createElement("p");
+        pFrase.classList.add("italic");
+        pFrase.classList.add("before:content-['\"']");
+        pFrase.classList.add("after:content-['\"']");
+        pFrase.textContent = frase;
+        let pAutor = document.createElement("p");
+        pAutor.textContent = "Steve Jobs";
+        pAutor.classList.add("text-right");
+        pAutor.classList.add("md:text-left");
+        
+        $cite.appendChild(pFrase);
+        $cite.appendChild(pAutor);
+    </script>
+</footer>

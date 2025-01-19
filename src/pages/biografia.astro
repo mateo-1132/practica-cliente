@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+
+---
+        
+
+<Layout>
+    <Header />
+    <main class="flex-grow-[1]  w-full flex justify-center items-center mx-auto">
+        <div id="timeline-embed" style="width: 80%; height:500px; background-color: transparent;"></div>
+    <script type="text/javascript">
+        timeline = new TL.Timeline('timeline-embed',
+        'https://docs.google.com/spreadsheets/d/1PujYa-NtRlp-sxQPtiMc1IdTQ1TKdocfKQoPXTJ95RU/edit?gid=0#gid=0');
+    </script>
+    </main>
+    <Footer />
+</Layout>

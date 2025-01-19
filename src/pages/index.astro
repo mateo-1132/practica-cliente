@@ -1,11 +1,24 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import SteveJobsImg from '../assets/img/SteveJobs.webp';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 ---
 
 <Layout>
-	<Welcome />
+	<Header />
+	<main class="flex-grow-[1] w-full flex flex-col justify-center items-center max-w-3xl mx-auto">
+		<section class="flex gap-4 justify-center md:flex-col md:gap-4 md:items-center items-center md:px-4">
+			<figure>
+				<img src={SteveJobsImg.src} alt="Steve Jobs" class="w-[800px] rounded-full md:w-[300px] md:text-center" />
+			</figure>
+			<article class="text-pretty ">
+				<h1 class="text-4xl font-bold pb-4 md:text-center">Steve Jobs</h1>
+				<p class="text-lg">Steve Jobs fue un empresario, diseñador industrial, magnate empresarial, propietario de medios e inversor estadounidense. Fue cofundador y presidente ejecutivo de <span class="font-bold text-red-800">Apple</span> y máximo accionista individual de <span class="font-bold text-red-800">The Walt Disney Company</span>.</p>
+			</article>
+		</section>
+	</main>
+	<Footer />
 </Layout>

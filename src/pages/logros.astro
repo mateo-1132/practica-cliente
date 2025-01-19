@@ -1,0 +1,67 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import MedalIcon from '../components/icons/MedalIcon.astro';
+import Macintosh from '../assets/img/Macintosh.png';
+import Iphone from '../assets/img/Iphone.png';
+import Itunes from '../assets/img/Itunes.png';
+import Ipad from '../assets/img/Ipad.png';
+import AppleTV from '../assets/img/AppleTV.png';
+import Ipod from '../assets/img/Ipod.png';
+---
+
+<Layout>
+    <Header />
+    <main class="flex-grow-[1] w-full max-w-4xl mx-auto md:px-4 ">
+        <div class="flex md:justify-center">
+            <MedalIcon class="w-10 h-10" />
+            <h1 class="text-4xl font-bold">Logros</h1>
+
+        </div>
+        <section class="grid grid-cols-6 grid-rows-4 gap-2 pt-2 w-full [&>*]:rounded-[15px] [&>*]:bg-[#191a19] dark:[&>*]:bg-gray-400 [&>*]:p-4 md:grid-cols-1 md:grid-rows-[min-content] md:[&>*]:h-fit md:h-auto ">
+            <div class="col-span-2 row-span-2 md:row-span-1 md:col-span-1">
+                <h1 class="text-3xl font-bold text-red-800">Macintosh</h1>
+                <p class="text-pretty pt-2">Las computadoras ya existían antes de que Steve Jobs creara la Macintosh, pero lo que él hizo por el mundo fue crear el primer ordenador personal con una interfaz gráfica de usuario. Por primera vez, una computadora agregaba un sistema de iconos, carpetas y ventanas, junto con un mouse para desplazarse por la pantalla.</p>
+                <img src={Macintosh.src} alt="">
+            </div>
+            <div class="col-span-4 md:col-span-1">
+                <h1 class="text-3xl font-bold text-red-800">Iphone</h1>
+                <div class="flex items-center md:flex-col">
+                    <p class="text-pretty pt-2 [align-self:start]">El iPhone revolucionó a la tecnología móvil al ser el primer teléfono con un diseño minimalista pero atractivo, además de poner de moda las pantallas táctiles en los smartphones. Un año después integró aplicaciones, lo que lo hizo aún más versátil.</p>
+                    <img src={Iphone.src} alt="" class="size-[190px]">
+                </div>
+
+            </div>
+            <div class="col-span-4 md:col-span-1">
+                <h1 class="text-3xl font-bold text-red-800">Ipad</h1>
+                <div class="flex items-center md:flex-col">
+                    <p class="text-pretty pt-2 [align-self:start]">Aunque antes del iPad ya existían tabletas en la industria, fue ésta la que logró levantar las ventas. iPad pasó a la historia como la primera tableta de éxito comercial y básicamente funcionaba como una fusión entre una Macintosh con un iPhone.</p>
+                    <img src={Ipad.src} alt="" class="size-[190px] ">
+                </div>
+            </div>
+            
+            <div class="col-span-3 md:col-span-1">
+                <h1 class="text-3xl font-bold text-red-800">Apple TV</h1>
+                <div class="flex items-center md:flex-col">
+                    <p class="text-pretty pt-2">Ahora cualquier marca de televisores puede ofrecer tecnología para conectarse a internet, pero el Apple TV fue el primero. Era la primera vez que un aparato permitía que una TV se conectara a Internet, escuchar música y ver contenidos especiales.</p>
+                    <img src={AppleTV.src} alt="" class="size-[130px]">
+                </div>
+            </div>
+            <div class="col-span-3 row-span-2 flex flex-col md:row-span-1 md:col-span-1">
+                <h1 class="text-3xl font-bold text-red-800">Itunes Store</h1>
+                <p class="text-pretty pt-2">Este es probablemente el primer servicio de Streaming que se conoce y funcionaba de una forma muy similar a lo que actualmente es Spotify, solo que aquí en lugar de pagar una cuenta mensual para acceder a una gran cantidad de canciones, debías comprarlas una a una por un precio muy pequeñito (centavos de dólar), lo que te impulsaba a crear tu catálogo personalizado de música.</p>
+                <p class="text-pretty pt-2">Este servicio a su vez transformó a la industria de la música, ya que antes de iTunes cualquier persona podía descargar música ilegalmente sin aportar ningún ingreso a su creadores.</p>
+                <img src={Itunes.src} alt="" class="size-[160px] [align-self:end] md:[align-self:center]">
+            </div>
+            <div class="col-span-3 md:col-span-1">
+                <h1 class="text-3xl font-bold text-red-800">Ipod</h1>
+                <div class="flex items-center md:flex-col">
+                    <p class="text-pretty pt-2">La llegada del iPod simbolizó una revolución para la industria musical, pues este se distinguía por su diseño compacto, su fácil funcionamiento y por su gran almacenamiento, pues podías tener "1.000 canciones en el bolsillo".</p>
+                    <img src={Ipod.src} alt="" class="size-[130px]">
+                </div>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
